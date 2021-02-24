@@ -21,7 +21,7 @@ type Course struct {
 	About               string `gorm:"type:varchar(100)"`
 	ProgressionBehavior string `gorm:"type:varchar(100)"`
 	ProgressionLimit    int
-	Certificates        CertificateList        `gorm:"foreignkey:CourceID"`
+	Certificates        CertificateList        `gorm:"foreignkey:CourseID"`
 	Authors             CourseAuthorList       `gorm:"foreignkey:CourseID"`
 	EvaluationCriterias EvaluationCriteriaList `gorm:"foreignkey:CourseID"`
 	Levels              LevelList              `gorm:"foreignkey:CourseID"`
